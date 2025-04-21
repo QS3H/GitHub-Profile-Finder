@@ -1,0 +1,432 @@
+/* Activity Timeline Styles */
+
+/* Action buttons in user card */
+.user-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.action-btn {
+  background: linear-gradient(
+    135deg,
+    var(--highlight-gradient-1),
+    var(--highlight-gradient-2)
+  );
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.action-btn i {
+  font-size: 0.9rem;
+}
+
+/* Activity Timeline Modal */
+.activity-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.activity-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.activity-content {
+  background: var(--analytics-bg);
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: modalFadeIn 0.4s forwards;
+  padding: 0;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(
+    90deg,
+    var(--analytics-header-bg-1),
+    var(--analytics-header-bg-2)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px 20px 0 0;
+  transition: background 0.3s ease;
+}
+
+.activity-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.activity-header h2 i {
+  color: var(--highlight-color);
+}
+
+.close-activity-modal {
+  background: transparent;
+  border: none;
+  color: var(--text-color-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-activity-modal:hover {
+  color: var(--text-color);
+  background-color: var(--item-bg);
+}
+
+.activity-body {
+  padding: 2rem;
+}
+
+/* Activity Loader */
+.activity-loader {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.activity-loader div {
+  width: 15px;
+  height: 15px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 0.5s infinite alternate;
+}
+
+.activity-loader div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.activity-loader div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Activity Error */
+.activity-error {
+  background-color: rgba(231, 76, 60, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.activity-error i {
+  color: var(--error-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Activity Dashboard */
+.activity-dashboard {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.activity-user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.activity-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+.activity-user-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-color);
+}
+
+.activity-user-details p {
+  color: var(--text-color-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.activity-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.activity-section {
+  background: var(--analytics-section-bg);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.activity-section h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--highlight-color);
+}
+
+/* Activity Stats */
+.activity-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--highlight-gradient-1),
+    var(--highlight-gradient-2)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon i {
+  color: white;
+  font-size: 1rem;
+}
+
+.stat-details {
+  flex: 1;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.stat-bar-container {
+  height: 6px;
+  background-color: var(--item-bg);
+  border-radius: 3px;
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+}
+
+.stat-bar {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--highlight-gradient-1),
+    var(--highlight-gradient-2)
+  );
+  border-radius: 3px;
+  transition: width 0.8s ease;
+}
+
+.stat-count {
+  font-size: 0.8rem;
+  color: var(--text-color-secondary);
+}
+
+/* Recent Activity List */
+.recent-activity-list {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
+}
+
+.recent-activity-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.recent-activity-list::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+  border-radius: 10px;
+}
+
+.recent-activity-list::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 10px;
+}
+
+.activity-item {
+  display: flex;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--item-bg);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.activity-item:hover {
+  transform: translateY(-3px);
+  background-color: var(--item-bg-hover);
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 138, 0, 0.15);
+  color: var(--highlight-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-type {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: var(--text-color);
+}
+
+.activity-description {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.activity-time {
+  font-size: 0.8rem;
+  color: var(--text-color-muted);
+}
+
+.no-activity {
+  text-align: center;
+  color: var(--text-color-muted);
+  padding: 2rem;
+}
+
+/* Chart container */
+.chart-container {
+  height: 300px;
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .activity-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-user-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .activity-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .activity-header {
+    padding: 1rem;
+  }
+
+  .activity-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .activity-body {
+    padding: 1rem;
+  }
+
+  .activity-section {
+    padding: 1rem;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .activity-item {
+    padding: 0.75rem;
+  }
+
+  .activity-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.75rem;
+  }
+}
