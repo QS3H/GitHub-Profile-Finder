@@ -155,10 +155,6 @@ Please ensure your code follows the existing style and includes appropriate docu
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Contact
-
-Shawky Ahmed - [shawkyahmed703@gmail.com](mailto:shawkyahmed703@gmail.com)
-
 ## 🙏 Acknowledgements
 
 - [GitHub API Documentation](https://docs.github.com/en/rest)
