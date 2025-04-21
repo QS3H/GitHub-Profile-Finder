@@ -6,6 +6,10 @@
 
 GitHub Profile Finder is a web application that allows users to search for GitHub profiles and view detailed information about GitHub users. The application leverages the GitHub API to fetch and display user profiles, repositories, activity timelines, and analytics in an intuitive and visually appealing interface.
 
+## Live Project
+
+Live Project Link: [GitHub Profile Finder](https://qs3h.github.io/GitHub-Profile-Finder/)
+
 ## ✨ Features
 
 - **User Search**: Quickly find GitHub users by username
@@ -153,9 +157,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
-
-Project Link: [https://github.com/yourusername/github-profile-finder](https://github.com/yourusername/github-profile-finder)
+Shawky Ahmed - [shawkyahmed703@gmail.com](mailto:shawkyahmed703@gmail.com)
 
 ## 🙏 Acknowledgements
 
