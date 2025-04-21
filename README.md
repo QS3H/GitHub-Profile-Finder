@@ -1,6 +1,6 @@
 # GitHub Profile Finder
 
-![GitHub Profile Finder](https://placehold.co/600x400?text=GitHub+Profile+Finder&font=montserrat)
+![GitHub Profile Finder](./Screenshot.png)
 
 ## 📋 Overview
 
