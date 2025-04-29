@@ -142,8 +142,3 @@ form.addEventListener("submit", (e) => {
     search.blur();
   }
 });
-
-// // Initial state - show GitHub's octocat profile
-// window.addEventListener("load", () => {
-//   getUser("octocat");
-// });
